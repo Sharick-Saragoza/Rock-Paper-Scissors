@@ -1,14 +1,13 @@
 // Function randomly returns “rock”, “paper” or “scissors”.
-function getComputerChoice(randomOutput) {
+function getComputerChoice(computerChoice) {
 
     let randomValue = Math.floor(Math.random() * 3);
 
     if (randomValue === 0) {
-        randomOutput = "rock";
+        computerChoice = "rock";
     } else if (randomValue === 1) {
-        randomOutput = "paper";
+        computerChoice = "paper";
     } else {
-        randomOutput = "scissors"
+        computerChoice = "scissors"
     }
 }
-
