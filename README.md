@@ -1,1 +1,4 @@
 # Rock-Paper-Scissors
+
+In this project I'm gonna create the rock paper scissors game. 
+First it will be entirely console based, after finishing the console version I will add a graphical user interface (GUI).
