@@ -20,7 +20,7 @@ function getComputerChoice(computerChoice) {
 
 // Gets the input of the human
 function getHumanChoice(humanChoice) {
-    return humanChoice = prompt("Choose rock, paper or scissors", "");;
+    return humanChoice =  prompt("Choose rock, paper or scissors", "").toLowerCase();
 }
 
 
@@ -28,7 +28,7 @@ const computerSelection = getComputerChoice();
 const humanSelection = getHumanChoice();
 
 // Starts a round
-function playRound(humanChoice, computerChoice) {
+function playRound(computerChoice, humanChoice) {
 
     // Looks for the winner
     if (computerChoice === "rock" && humanChoice === "paper") {
