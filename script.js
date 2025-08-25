@@ -14,31 +14,42 @@ function getComputerChoice(computerChoice) {
     } else {
         return computerChoice = "scissors";
     }
-    
 }
+
+
 
 // Gets the input of the human
 function getHumanChoice(humanChoice) {
-    return humanChoice = prompt("Choose rock, paper or scissors", "");
+    return humanChoice = prompt("Choose rock, paper or scissors", "");;
 }
 
-function playRound() {
 
-    if (getComputerChoice() === "rock" && getHumanChoice() === "paper") {
+const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
+
+// Starts a round
+function playRound(humanChoice, computerChoice) {
+
+    // Looks for the winner
+    if (computerChoice === "rock" && humanChoice === "paper") {
         console.log("You win paper wins against rock!");
-    } else if (getComputerChoice() === "rock" && getHumanChoice() === "scissors") {
+    } else if (computerChoice === "rock" && humanChoice === "scissors") {
         console.log("You lose and the scissors break!");
-    } else if (getComputerChoice() === "paper" && getHumanChoice() === "rock") {
+    } else if (computerChoice === "paper" && humanChoice === "rock") {
         console.log("You lose rock loses against paper!");
-    } else if (getComputerChoice() === "paper" && getHumanChoice() === "scissors") {
+    } else if (computerChoice === "paper" && humanChoice === "scissors") {
         console.log("You win scissors wins against paper!");
-    } else if (getComputerChoice() === "scissors" && getHumanChoice() === "rock") {
+    } else if (computerChoice === "scissors" && humanChoice === "rock") {
         console.log("You win rock wins against scissors");
-    } else if (getComputerChoice() === "scissors" && getHumanChoice() === "paper") {
+    } else if (computerChoice === "scissors" && humanChoice === "paper") {
         console.log("You lose paper loses against scissors")
-    } else if (getComputerChoice() === getHumanChoice()) {
-        console.log("Draw, no one wins")
+    } else if (computerChoice === humanChoice) {
+        console.log("Draw, no one wins");
     }
+
+    console.log("You chose " + humanChoice)
+    console.log("The computer chose " + computerChoice)
 }
 
-// console.log("You played " + getHumanChoice() + " against " + getComputerChoice());
+
+playRound(computerSelection, humanSelection);
