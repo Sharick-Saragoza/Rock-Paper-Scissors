@@ -39,6 +39,7 @@ const scissor = document.getElementById("scissorBtn").addEventListener("click", 
     playRound(getComputerChoice(), humanChoice);
 });
 
+const score = document.querySelector(".score")
 let computerScore = 0;
 let humanScore = 0;
 
@@ -70,11 +71,9 @@ function playRound(computerChoice, humanChoice) {
         console.log("Draw, no one wins");
     }
 
-    console.log("Score: " + humanScore + " - " + computerScore)
+    score.textContent = `${humanScore} - ${computerScore}`;
+    console.log("Score: " + humanScore + " - " + computerScore)   
 }
-
-
-
 
 
 
