@@ -14,9 +14,9 @@ function getComputerChoice(computerChoice) {
 }
 
 // Gets the input of the human
-function getHumanChoice(humanChoice) {
-    return humanChoice = prompt("Choose rock, paper or scissors", "").toLowerCase();
-}
+// function getHumanChoice(humanChoice) {
+//     return humanChoice = prompt("Choose rock, paper or scissors", "").toLowerCase();
+// }
 
 function playGame() {
 
