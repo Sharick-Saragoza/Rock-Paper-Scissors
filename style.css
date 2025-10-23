@@ -11,6 +11,10 @@ html, body {
     justify-content: center;
 }
 
+.game-container {
+    display: none;
+}
+
 .c-top {
     display: flex;
     justify-content: space-evenly;
@@ -20,4 +24,9 @@ html, body {
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+.play-container {
+    display: flex;
+    justify-content: center;
 }
