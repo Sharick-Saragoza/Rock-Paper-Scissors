@@ -39,9 +39,12 @@ const scissor = document.getElementById("scissorBtn").addEventListener("click", 
     playRound(getComputerChoice(), humanChoice);
 });
 
-const score = document.querySelector(".score")
+const score = document.querySelector(".score");
 let computerScore = 0;
 let humanScore = 0;
+
+const displayHumanChoice = document.querySelector(".human-choice");
+const displayComputerChoice = document.querySelector(".computer-choice");
 
 // Starts a round
 function playRound(computerChoice, humanChoice) {
@@ -73,6 +76,22 @@ function playRound(computerChoice, humanChoice) {
 
     score.textContent = `${humanScore} - ${computerScore}`;
     console.log("Score: " + humanScore + " - " + computerScore)   
+
+    if (humanChoice === "rock") {
+        displayHumanChoice.textContent = "🪨";
+    } else if (humanChoice === "paper") {
+        displayHumanChoice.textContent = "🧻";
+    } else if (humanChoice === "scissor") {
+        displayHumanChoice.textContent = "✂️";
+    }
+
+    if (computerChoice === "rock") {
+        displayComputerChoice.textContent = "🪨";
+    } else if (computerChoice === "paper") {
+        displayComputerChoice.textContent = "🧻";
+    } else if (computerChoice === "scissor") {
+        displayComputerChoice.textContent = "✂️";
+    }
 }
 
 
