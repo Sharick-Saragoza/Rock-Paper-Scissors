@@ -19,7 +19,8 @@ html, body {
 
 .c-top {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 100px;
     margin-bottom: 10px;
 }
 
