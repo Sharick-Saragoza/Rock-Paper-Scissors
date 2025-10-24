@@ -14,9 +14,9 @@ function getComputerChoice(computerChoice) {
 }
 
 const playBtn = document.getElementById("playBtn");
+const gameContainer = document.querySelector(".game-container");
 
 playBtn.addEventListener("click", () => {
-    const gameContainer = document.querySelector(".game-container");
     gameContainer.style.display = "block";
     playBtn.style.display = "none";
 });
@@ -75,7 +75,7 @@ function playRound(computerChoice, humanChoice) {
     }
 
     score.textContent = `${humanScore} - ${computerScore}`;
-    console.log("Score: " + humanScore + " - " + computerScore)   
+    console.log("Score: " + humanScore + " - " + computerScore)
 
     if (humanChoice === "rock") {
         displayHumanChoice.textContent = "🪨";
@@ -92,11 +92,30 @@ function playRound(computerChoice, humanChoice) {
     } else if (computerChoice === "scissor") {
         displayComputerChoice.textContent = "✂️";
     }
+
+    if (humanScore >= 4) {
+        alert("You won!");
+        gameContainer.style.display = "none";
+        restartBtn.style.display = "block";
+    } else if (computerScore >= 4) {
+        alert("You lose!");
+        gameContainer.style.display = "none";
+        restartBtn.style.display = "block";
+    }
 }
 
+const restartBtn = document.getElementById("restartBtn")
+restartBtn.addEventListener("click", () => {
+    window.location.reload();
+});
+restartBtn.style.display = "none";
 
 
-    
+
+
+
+
+
 
 
 
