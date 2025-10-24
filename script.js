@@ -18,6 +18,7 @@ const gameContainer = document.querySelector(".game-container");
 
 playBtn.addEventListener("click", () => {
     gameContainer.style.display = "block";
+    gameContainer.style.gap = "10px";
     playBtn.style.display = "none";
 });
 
